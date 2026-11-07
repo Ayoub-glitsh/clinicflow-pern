@@ -25,6 +25,7 @@ export interface Appointment {
   status: 'pending' | 'confirmed' | 'cancelled';
   notes: string | null;
   createdAt: string;
+  patient?: { fullName: string } | null;
 }
 
 export interface PaginatedResponse<T> {

@@ -76,7 +76,13 @@ export async function getAppointments(query: AppointmentQueryInput) {
   }
 
   const [data, total] = await prisma.$transaction([
-    prisma.appointment.findMany({ where, skip, take: limit, orderBy: { appointmentDate: 'asc' } }),
+    prisma.appointment.findMany({
+      where,
+      skip,
+      take: limit,
+      orderBy: { appointmentDate: 'asc' },
+      include: { patient: { select: { fullName: true } } },
+    }),
     prisma.appointment.count({ where }),
   ]);
 

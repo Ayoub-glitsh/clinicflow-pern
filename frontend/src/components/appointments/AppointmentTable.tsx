@@ -20,7 +20,7 @@ export default function AppointmentTable({ appointments, onStatusUpdate, onEdit,
       <table className="min-w-full divide-y divide-gray-200 text-sm">
         <thead className="bg-gray-50">
           <tr>
-            {['Patient ID', 'Date & Time', 'Status', 'Notes', 'Change Status', 'Actions'].map(h => (
+            {['Patient Name', 'Date & Time', 'Status', 'Notes', 'Change Status', 'Actions'].map(h => (
               <th key={h} className="px-4 py-3 text-left font-medium text-gray-500 uppercase tracking-wider">{h}</th>
             ))}
           </tr>
@@ -34,7 +34,7 @@ export default function AppointmentTable({ appointments, onStatusUpdate, onEdit,
             </tr>
           ) : appointments.map(a => (
             <tr key={a.id} className="hover:bg-gray-50">
-              <td className="px-4 py-3 text-gray-600 font-mono text-xs">{a.patientId.slice(0, 8)}…</td>
+              <td className="px-4 py-3 text-gray-900 font-medium">{a.patient?.fullName ?? '—'}</td>
               <td className="px-4 py-3 text-gray-900">{new Date(a.appointmentDate).toLocaleString()}</td>
               <td className="px-4 py-3"><StatusBadge status={a.status} /></td>
               <td className="px-4 py-3 text-gray-500 max-w-xs truncate">{a.notes || '—'}</td>
