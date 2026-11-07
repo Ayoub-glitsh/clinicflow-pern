@@ -1,4 +1,13 @@
 <div align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=35&pause=1000&color=2E8B57&center=true&vCenter=true&width=600&lines=ClinicFlow;Clinic+Management+System;PERN+Stack" alt="Typing SVG" />
+  </a>
+</div>
+
+
+
+
+<div align="center">
 
 # ClinicFlow
 
