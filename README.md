@@ -1,45 +1,10 @@
 <div align="center">
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="45" height="45" alt="Node.js" />
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" width="45" height="45" alt="Express" />
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="45" height="45" alt="TypeScript" />
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="45" height="45" alt="PostgreSQL" />
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg" width="45" height="45" alt="Prisma" />
-<img src="https://cdn.simpleicons.org/zod/3E67B1" width="45" height="45" alt="Zod" />
-<img src="https://cdn.simpleicons.org/jsonwebtokens/000000" width="45" height="45" alt="JWT" />
-<img src="https://cdn-icons-png.flaticon.com/512/3064/3064155.png" width="45" height="45" alt="bcryptjs" />
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="45" height="45" alt="React" />
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" width="45" height="45" alt="Vite" />
-<img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" width="45" height="45" alt="Tailwind CSS" />
-<img src="https://cdn.simpleicons.org/reactrouter/CA4245" width="45" height="45" alt="React Router" />
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/axios/axios-plain.svg" width="45" height="45" alt="Axios" />
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" width="45" height="45" alt="Jest" />
-<img src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/clipboard-check.svg" width="45" height="45" alt="Supertest" />
-<img src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/brain-circuit.svg" width="45" height="45" alt="fast-check" />
-
-</div>
-
-
-
-<br/>
-
-
-<div align="center">
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=35&pause=1000&color=2E8B57&center=true&vCenter=true&width=600&lines=ClinicFlow;Clinic+Management+System;PERN+Stack" alt="Typing SVG" />
-  </a>
-</div>
-
-
-
-
-<div align="center">
-
 # ClinicFlow
 
-### Clinic Management System — PERN Stack
+### Système de Gestion de Clinique — Stack PERN
 
-*Full-stack web application for managing patients, appointments, and users in a small clinic.*
+*Application web full-stack pour la gestion des patients, rendez-vous et utilisateurs d'une petite clinique.*
 
 ---
 
@@ -55,70 +20,70 @@
 
 ---
 
-## Table of Contents
+## Table des matières
 
-- [Overview](#overview)
-- [Tech Stack](#tech-stack)
-- [Database Design (ERD)](#database-design-erd)
-- [Project Architecture](#project-architecture)
-- [API Reference](#api-reference)
-- [Features](#features)
+- [Vue d'ensemble](#vue-densemble)
+- [Stack technique](#stack-technique)
+- [Conception de la base de données (ERD)](#conception-de-la-base-de-données-erd)
+- [Architecture du projet](#architecture-du-projet)
+- [Référence API](#référence-api)
+- [Fonctionnalités](#fonctionnalités)
 - [Installation](#installation)
 - [Tests](#tests)
-- [Seed Credentials](#seed-credentials)
+- [Identifiants de test](#identifiants-de-test)
 
 ---
 
-## Overview
+## Vue d'ensemble
 
-ClinicFlow is a full-stack web application designed to help small clinics manage:
+ClinicFlow est une application web full-stack conçue pour aider les petites cliniques à gérer :
 
-- **Patients** — Create, update, soft-delete, paginated search
-- **Appointments** — Scheduling with a 30-minute anti-conflict rule
-- **Users** — JWT authentication with admin/staff roles
-- **Dashboard** — Real-time aggregated statistics
+- **Patients** — Création, modification, suppression douce, recherche paginée
+- **Rendez-vous** — Planification avec règle anti-conflit de 30 minutes
+- **Utilisateurs** — Authentification JWT avec rôles admin/staff
+- **Dashboard** — Statistiques agrégées en temps réel
 
 ---
 
-## Tech Stack
+## Stack technique
 
 ### Backend
 
-| | Technology | Role |
+| | Technologie | Rôle |
 |---|---|---|
-| <img src="https://nodejs.org/static/logos/nodejsLight.svg" alt="Node.js" width="55"> | **Node.js v22** | Server-side JavaScript runtime |
-| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" width="30"/> | **Express.js 4** | HTTP framework — routing and middleware |
-| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="30"/> | **TypeScript 5** | Static typing, compile-time safety |
-| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="30"/> | **PostgreSQL 15** | Relational database |
-| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg" width="30"/> | **Prisma ORM** | Typed DB client, migrations, schema-as-code |
-| <img src="https://cdn.simpleicons.org/zod/3E67B1" alt="Zod" width="35" height="35" /> | **Zod** | Input validation with TypeScript schemas |
-| <img src="https://jwt.io/img/favicon/favicon-16x16.png" width="30"/> | **JWT** | Stateless authentication — 24h tokens |
-| <img src="https://cdn-icons-png.flaticon.com/512/3064/3064155.png" alt="bcryptjs" width="40" height="30" /> | **bcryptjs** | Password hashing (cost factor 10) |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="18"/> | **Node.js v22** | Runtime JavaScript côté serveur |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" width="18"/> | **Express.js 4** | Framework HTTP — routage et middleware |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="18"/> | **TypeScript 5** | Typage statique, sécurité à la compilation |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="18"/> | **PostgreSQL 15** | Base de données relationnelle |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg" width="18"/> | **Prisma ORM** | Client DB typé, migrations, schéma en code |
+| <img src="https://zod.dev/logo.svg" width="18"/> | **Zod** | Validation des entrées avec schémas TypeScript |
+| <img src="https://jwt.io/img/favicon/favicon-16x16.png" width="18"/> | **JWT** | Authentification stateless — tokens 24h |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="18"/> | **bcryptjs** | Hachage des mots de passe (facteur de coût 10) |
 
 ### Frontend
 
-| | Technology | Role |
+| | Technologie | Rôle |
 |---|---|---|
-| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="30"/> | **React 18** | UI with hooks, context, functional components |
-| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="30"/> | **TypeScript 5** | Typed props, API calls, state |
-| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" width="30"/> | **Vite 8** | Fast build tool with HMR |
-| <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="Tailwind CSS" width="40" height="40" /> | **Tailwind CSS 3** | Utility-first styling |
-| <img src="https://cdn.simpleicons.org/reactrouter/CA4245" alt="React Router" width="40" height="35" /> | **React Router v6** | SPA navigation with protected routes |
-| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/axios/axios-plain.svg" width="30"/> | **Axios** | HTTP client with JWT/401 interceptors |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="18"/> | **React 18** | Interface avec hooks, context, composants fonctionnels |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="18"/> | **TypeScript 5** | Typage des props, appels API, état |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" width="18"/> | **Vite 8** | Outil de build rapide avec HMR |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" width="18"/> | **Tailwind CSS 3** | Stylisation utility-first |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="18"/> | **React Router v6** | Navigation SPA avec routes protégées |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/axios/axios-plain.svg" width="18"/> | **Axios** | Client HTTP avec intercepteurs JWT/401 |
 
-### Testing
+### Tests
 
-| | Technology | Role |
+| | Technologie | Rôle |
 |---|---|---|
-| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" width="30"/> | **Jest 29** | Test runner with ts-jest |
-| <img src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/clipboard-check.svg" alt="Supertest" width="40" height="40" /> | **Supertest** | HTTP integration testing without a live server |
-| <img src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/brain-circuit.svg" alt="fast-check" width="40" height="40" /> | **fast-check** | Property-based testing — 100 runs per property |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" width="18"/> | **Jest 29** | Lanceur de tests avec ts-jest |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="18"/> | **Supertest** | Tests d'intégration HTTP sans serveur actif |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="18"/> | **fast-check** | Tests basés sur les propriétés — 100 exécutions par propriété |
 
 ---
 
-## Database Design (ERD)
+## Conception de la base de données (ERD)
 
-### Entity-Relationship Diagram
+### Diagramme Entité-Relation
 
 ```mermaid
 erDiagram
@@ -155,57 +120,57 @@ erDiagram
     patients   ||--o{ appointments : "patientId"
 ```
 
-### Relationship Justification
+### Justification des relations
 
-#### users to appointments (1-N)
+#### users vers appointments (1-N)
 
-A user (admin or staff) can create many appointments. Each appointment is created by exactly one user.
+Un utilisateur (admin ou staff) peut créer plusieurs rendez-vous. Chaque rendez-vous est créé par exactement un utilisateur.
 
-- **FK**: `appointments.createdBy` references `users.id`
-- **ON DELETE SET NULL** — if a staff account is deleted, appointment history is preserved for medical record traceability. `createdBy` becomes null rather than cascading a delete.
+- **FK** : `appointments.createdBy` référence `users.id`
+- **ON DELETE SET NULL** — si un compte staff est supprimé, l'historique des rendez-vous est conservé pour la traçabilité du dossier médical. `createdBy` devient null au lieu de provoquer une suppression en cascade.
 
-#### patients to appointments (1-N)
+#### patients vers appointments (1-N)
 
-A patient can have many appointments over time. Each appointment belongs to exactly one patient.
+Un patient peut avoir plusieurs rendez-vous au fil du temps. Chaque rendez-vous appartient à exactement un patient.
 
-- **FK**: `appointments.patientId` references `patients.id`
-- **ON DELETE CASCADE** — appointments without a patient have no meaning. Physical deletion of a patient (exceptional case) removes associated appointments.
+- **FK** : `appointments.patientId` référence `patients.id`
+- **ON DELETE CASCADE** — un rendez-vous sans patient n'a pas de sens. La suppression physique d'un patient (cas exceptionnel) supprime les rendez-vous associés.
 
-#### N-N relationships
+#### Relations N-N
 
-No many-to-many relationships exist in this schema. The design is intentionally simple for a single-clinic application. A `doctors` table with a `doctor_appointment` junction table could be added to support multiple practitioners.
+Aucune relation plusieurs-à-plusieurs n'existe dans ce schéma. La conception est intentionnellement simple pour une clinique à praticien unique. Une table `doctors` avec une table de jonction `doctor_appointment` pourrait être ajoutée pour gérer plusieurs praticiens.
 
-### Constraints and Indexes
+### Contraintes et index
 
 ```mermaid
 graph TD
     A[patients.cin UNIQUE]
     B[users.email UNIQUE]
-    C[appointments.status ENUM\npending or confirmed or cancelled]
-    D[patients.deletedAt NULLABLE\nSoft Delete]
+    C[appointments.status ENUM\npending ou confirmed ou cancelled]
+    D[patients.deletedAt NULLABLE\nSuppression douce]
     E[INDEX patients fullName]
     F[INDEX patients cin]
     G[INDEX appointments appointmentDate]
-    H[appointments.patientId references patients.id\nCASCADE DELETE]
-    I[appointments.createdBy references users.id\nSET NULL DELETE]
+    H[appointments.patientId reference patients.id\nCASCADE DELETE]
+    I[appointments.createdBy reference users.id\nSET NULL DELETE]
 ```
 
-### 30-Minute Anti-Conflict Rule
+### Règle anti-conflit de 30 minutes
 
 ```mermaid
 flowchart TD
-    A[New appointment request\ndate T for patient P] --> B[Query confirmed appointments\nfor patient P]
-    B --> C{Does T prime exist\nwhere T-30min is less than T prime\nand T prime is less than T+30min}
-    C -->|YES| D[HTTP 409 Conflict\nReturn conflicting appointment datetime]
-    C -->|NO| E[Serializable transaction\nRe-check inside DB lock]
-    E --> F[Create appointment\nstatus pending]
+    A[Nouvelle demande de rendez-vous\ndate T pour le patient P] --> B[Chercher les rendez-vous confirmes\npour le patient P]
+    B --> C{Existe-t-il T prime tel que\nT moins 30min est inferieur a T prime\net T prime est inferieur a T plus 30min}
+    C -->|OUI| D[HTTP 409 Conflit\nRetourner la date du rendez-vous conflictuel]
+    C -->|NON| E[Transaction Serializable\nRe-verification dans le verrou DB]
+    E --> F[Creation du rendez-vous\nstatut pending]
 ```
 
 ---
 
-## Project Architecture
+## Architecture du projet
 
-### Directory Structure
+### Structure des dossiers
 
 ```
 clinicflow-pern/
@@ -242,16 +207,16 @@ clinicflow-pern/
 └── README.md
 ```
 
-### Layered Backend Architecture
+### Architecture en couches du backend
 
 ```mermaid
 graph TD
     Client[React SPA]
-    MW[Middleware Stack\nCORS - JSON - Auth - Role - Error]
+    MW[Pile Middleware\nCORS - JSON - Auth - Role - Error]
     R[Routes]
-    C[Controllers\nExtract params - Format response]
-    S[Services\nBusiness logic]
-    P[Prisma Client]
+    C[Controlleurs\nExtraction parametres - Formatage reponse]
+    S[Services\nLogique metier]
+    P[Client Prisma]
     DB[(PostgreSQL)]
 
     Client --> MW
@@ -262,51 +227,51 @@ graph TD
     P --> DB
 ```
 
-### Authentication Flow
+### Flux d'authentification
 
 ```mermaid
 sequenceDiagram
-    participant FE as React Frontend
-    participant BE as Express API
+    participant FE as Frontend React
+    participant BE as API Express
     participant DB as PostgreSQL
 
-    FE->>BE: POST /api/auth/login email and password
+    FE->>BE: POST /api/auth/login email et mot de passe
     BE->>DB: SELECT user WHERE email
     DB-->>BE: id email passwordHash role
-    BE->>BE: bcrypt.compare password hash
+    BE->>BE: bcrypt.compare mot de passe hash
     BE->>BE: jwt.sign id email role secret 24h
-    BE-->>FE: token and user id email role
+    BE-->>FE: token et user id email role
     FE->>FE: localStorage.setItem token
 
-    Note over FE,BE: Subsequent requests
+    Note over FE,BE: Requetes suivantes
 
     FE->>BE: GET /api/patients\nAuthorization Bearer token
     BE->>BE: jwt.verify token
     BE->>DB: SELECT patients WHERE deletedAt IS NULL
-    DB-->>BE: patients array
+    DB-->>BE: tableau de patients
     BE-->>FE: data total page totalPages
 ```
 
 ---
 
-## API Reference
+## Référence API
 
-**Base URL**: `http://localhost:5000/api`
+**URL de base** : `http://localhost:5000/api`
 
-All protected routes require the header:
+Toutes les routes protégées nécessitent l'en-tête :
 ```
 Authorization: Bearer <token>
 ```
 
 ---
 
-### Auth
+### Authentification
 
 #### POST /api/auth/login
 
-Authenticates a user and returns a JWT valid for 24 hours.
+Authentifie un utilisateur et retourne un JWT valide pendant 24 heures.
 
-**Request body**
+**Corps de la requête**
 ```json
 {
   "email": "admin@clinicflow.com",
@@ -314,7 +279,7 @@ Authenticates a user and returns a JWT valid for 24 hours.
 }
 ```
 
-**Response 200**
+**Réponse 200**
 ```json
 {
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
@@ -328,17 +293,17 @@ Authenticates a user and returns a JWT valid for 24 hours.
 
 | Code | Description |
 |------|-------------|
-| 200 | Success |
-| 400 | Missing or invalid email/password field |
-| 401 | Invalid credentials |
+| 200 | Succès |
+| 400 | Champ email ou mot de passe manquant ou invalide |
+| 401 | Identifiants incorrects |
 
 ---
 
 #### GET /api/auth/me
 
-Requires JWT. Returns the current authenticated user without the password hash.
+Requiert JWT. Retourne l'utilisateur courant sans le hash du mot de passe.
 
-**Response 200**
+**Réponse 200**
 ```json
 {
   "id": "5ff2a4d1-0eb6-46f3-baf6-10d6d2ae4b8f",
@@ -349,8 +314,8 @@ Requires JWT. Returns the current authenticated user without the password hash.
 
 | Code | Description |
 |------|-------------|
-| 200 | Success |
-| 401 | Missing or invalid token |
+| 200 | Succès |
+| 401 | Token manquant ou invalide |
 
 ---
 
@@ -358,9 +323,9 @@ Requires JWT. Returns the current authenticated user without the password hash.
 
 #### POST /api/patients
 
-Requires JWT. Creates a new patient.
+Requiert JWT. Crée un nouveau patient.
 
-**Request body**
+**Corps de la requête**
 ```json
 {
   "fullName": "Mohammed Alami",
@@ -371,7 +336,7 @@ Requires JWT. Creates a new patient.
 }
 ```
 
-**Response 201**
+**Réponse 201**
 ```json
 {
   "id": "a1b2c3d4-...",
@@ -387,30 +352,30 @@ Requires JWT. Creates a new patient.
 
 | Code | Description |
 |------|-------------|
-| 201 | Created |
-| 400 | Missing required field or invalid format |
-| 409 | CIN already registered |
+| 201 | Créé |
+| 400 | Champ requis manquant ou format invalide |
+| 409 | CIN déjà enregistré |
 
 ---
 
 #### GET /api/patients
 
-Requires JWT. Returns a paginated list of active (non-deleted) patients.
+Requiert JWT. Retourne une liste paginée des patients actifs (non supprimés).
 
-**Query parameters**
+**Paramètres de requête**
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| page | number | 1 | Page number |
-| limit | number | 10 | Results per page |
-| search | string | — | Case-insensitive search on fullName or CIN |
+| Paramètre | Type | Défaut | Description |
+|-----------|------|--------|-------------|
+| page | number | 1 | Numéro de page |
+| limit | number | 10 | Résultats par page |
+| search | string | — | Recherche insensible à la casse sur fullName ou CIN |
 
-**Example**
+**Exemple**
 ```
 GET /api/patients?page=1&limit=10&search=alami
 ```
 
-**Response 200**
+**Réponse 200**
 ```json
 {
   "data": [{ "id": "...", "fullName": "Mohammed Alami", "cin": "BE123456" }],
@@ -425,68 +390,68 @@ GET /api/patients?page=1&limit=10&search=alami
 
 #### GET /api/patients/:id
 
-Requires JWT. Returns a single patient by UUID.
+Requiert JWT. Retourne un patient par son UUID.
 
 | Code | Description |
 |------|-------------|
-| 200 | Patient object |
-| 404 | Not found or soft-deleted |
+| 200 | Objet patient |
+| 404 | Introuvable ou supprimé de manière douce |
 
 ---
 
 #### PUT /api/patients/:id
 
-Requires JWT. Updates patient fields. All fields are optional.
+Requiert JWT. Met à jour les champs d'un patient. Tous les champs sont optionnels.
 
-**Request body** (partial)
+**Corps de la requête** (partiel)
 ```json
 {
   "phone": "+212699999999",
-  "address": "New address"
+  "address": "Nouvelle adresse"
 }
 ```
 
 | Code | Description |
 |------|-------------|
-| 200 | Updated patient object |
-| 404 | Not found or soft-deleted |
-| 409 | New CIN belongs to another patient |
+| 200 | Objet patient mis à jour |
+| 404 | Introuvable ou supprimé de manière douce |
+| 409 | Le nouveau CIN appartient à un autre patient |
 
 ---
 
 #### DELETE /api/patients/:id
 
-Requires JWT. Admin role only. Soft-deletes the patient by setting `deletedAt = NOW()`. Data is not physically removed.
+Requiert JWT. Rôle admin uniquement. Effectue une suppression douce du patient en définissant `deletedAt = NOW()`. Les données ne sont pas physiquement supprimées.
 
-**Response 200**
+**Réponse 200**
 ```json
 { "message": "Patient soft-deleted" }
 ```
 
 | Code | Description |
 |------|-------------|
-| 200 | Success |
-| 403 | Insufficient role (staff) |
-| 404 | Patient not found |
+| 200 | Succès |
+| 403 | Rôle insuffisant (staff) |
+| 404 | Patient introuvable |
 
 ---
 
-### Appointments
+### Rendez-vous
 
 #### POST /api/appointments
 
-Requires JWT. Creates a new appointment with `status: "pending"` by default.
+Requiert JWT. Crée un nouveau rendez-vous avec `status: "pending"` par défaut.
 
-**Request body**
+**Corps de la requête**
 ```json
 {
   "patientId": "a1b2c3d4-...",
   "appointmentDate": "2024-07-15T09:00:00.000Z",
-  "notes": "Post-operative follow-up consultation"
+  "notes": "Consultation de suivi post-opératoire"
 }
 ```
 
-**Response 201**
+**Réponse 201**
 ```json
 {
   "id": "...",
@@ -494,39 +459,39 @@ Requires JWT. Creates a new appointment with `status: "pending"` by default.
   "createdBy": "5ff2a4d1-...",
   "appointmentDate": "2024-07-15T09:00:00.000Z",
   "status": "pending",
-  "notes": "Post-operative follow-up consultation",
+  "notes": "Consultation de suivi post-opératoire",
   "createdAt": "2024-06-01T10:00:00.000Z"
 }
 ```
 
 | Code | Description |
 |------|-------------|
-| 201 | Created |
-| 400 | Invalid UUID, malformed date |
-| 404 | Patient not found or soft-deleted |
-| 409 | Conflict: confirmed appointment within +/- 30 minutes |
+| 201 | Créé |
+| 400 | UUID invalide, date mal formatée |
+| 404 | Patient introuvable ou supprimé de manière douce |
+| 409 | Conflit : rendez-vous confirmé dans la fenêtre de +/- 30 minutes |
 
 ---
 
 #### GET /api/appointments
 
-Requires JWT. Paginated list of appointments with optional filters.
+Requiert JWT. Liste paginée des rendez-vous avec filtres optionnels.
 
-**Query parameters**
+**Paramètres de requête**
 
-| Parameter | Type | Description |
+| Paramètre | Type | Description |
 |-----------|------|-------------|
-| page | number | Page number (default: 1) |
-| limit | number | Results per page (default: 10) |
-| date | YYYY-MM-DD | Filter by UTC calendar day |
-| status | pending or confirmed or cancelled | Filter by status |
+| page | number | Numéro de page (défaut : 1) |
+| limit | number | Résultats par page (défaut : 10) |
+| date | YYYY-MM-DD | Filtre par jour calendaire UTC |
+| status | pending ou confirmed ou cancelled | Filtre par statut |
 
-**Example**
+**Exemple**
 ```
 GET /api/appointments?date=2024-07-15&status=confirmed
 ```
 
-**Response 200**
+**Réponse 200**
 ```json
 {
   "data": [...],
@@ -539,30 +504,30 @@ GET /api/appointments?date=2024-07-15&status=confirmed
 
 | Code | Description |
 |------|-------------|
-| 200 | Success |
-| 400 | Invalid status value |
+| 200 | Succès |
+| 400 | Valeur de statut invalide |
 
 ---
 
 #### PATCH /api/appointments/:id/status
 
-Requires JWT. Updates the status of an appointment.
+Requiert JWT. Met à jour le statut d'un rendez-vous.
 
-**Request body**
+**Corps de la requête**
 ```json
 { "status": "confirmed" }
 ```
 
-Accepted values: `pending` `confirmed` `cancelled`
+Valeurs acceptées : `pending` `confirmed` `cancelled`
 
-**Response 200** — Updated appointment object
+**Réponse 200** — Objet rendez-vous mis à jour
 
 | Code | Description |
 |------|-------------|
-| 200 | Success |
-| 400 | Invalid status value |
-| 404 | Appointment not found |
-| 409 | Conflict: confirming would create a 30-minute overlap with another confirmed appointment |
+| 200 | Succès |
+| 400 | Valeur de statut invalide |
+| 404 | Rendez-vous introuvable |
+| 409 | Conflit : la confirmation créerait un chevauchement de 30 minutes avec un autre rendez-vous confirmé |
 
 ---
 
@@ -570,9 +535,9 @@ Accepted values: `pending` `confirmed` `cancelled`
 
 #### GET /api/dashboard/stats
 
-Requires JWT. Returns four aggregated metrics in a single request.
+Requiert JWT. Retourne quatre métriques agrégées en une seule requête.
 
-**Response 200**
+**Réponse 200**
 ```json
 {
   "totalPatients": 42,
@@ -582,22 +547,22 @@ Requires JWT. Returns four aggregated metrics in a single request.
 }
 ```
 
-| Field | Calculation |
-|-------|-------------|
+| Champ | Calcul |
+|-------|--------|
 | totalPatients | COUNT patients WHERE deletedAt IS NULL |
-| appointmentsToday | COUNT WHERE appointmentDate BETWEEN 00:00:00 AND 23:59:59 UTC today |
-| pendingCount | COUNT WHERE status = pending (all dates) |
-| confirmedCount | COUNT WHERE status = confirmed (all dates) |
+| appointmentsToday | COUNT WHERE appointmentDate ENTRE 00:00:00 ET 23:59:59 UTC aujourd'hui |
+| pendingCount | COUNT WHERE status = pending (toutes dates) |
+| confirmedCount | COUNT WHERE status = confirmed (toutes dates) |
 
 ---
 
-### Error Format
+### Format des erreurs
 
-All errors follow a consistent JSON shape:
+Toutes les erreurs suivent un format JSON uniforme :
 
 ```json
 {
-  "error": "Descriptive message",
+  "error": "Message descriptif",
   "details": [
     { "field": "email", "message": "Invalid email" },
     { "field": "cin",   "message": "cin is required" }
@@ -605,121 +570,121 @@ All errors follow a consistent JSON shape:
 }
 ```
 
-`details` is only present on validation failures (HTTP 400).
+`details` est présent uniquement pour les erreurs de validation (HTTP 400).
 
-### HTTP Status Codes
+### Codes HTTP
 
-| Code | Meaning |
-|------|---------|
-| 200 | Success |
-| 201 | Resource created |
-| 400 | Validation failed |
-| 401 | Not authenticated |
-| 403 | Not authorized |
-| 404 | Resource not found |
-| 409 | Conflict (duplicate CIN or appointment overlap) |
-| 500 | Internal server error |
+| Code | Signification |
+|------|---------------|
+| 200 | Succès |
+| 201 | Ressource créée |
+| 400 | Validation échouée |
+| 401 | Non authentifié |
+| 403 | Non autorisé |
+| 404 | Ressource introuvable |
+| 409 | Conflit (CIN dupliqué ou chevauchement de rendez-vous) |
+| 500 | Erreur interne du serveur |
 
 ---
 
-## Features
+## Fonctionnalités
 
-**Security**
-- Passwords hashed with bcrypt (cost factor 10)
-- JWT with 24h expiration — payload: id, email, role
-- Auth middleware on all protected routes
-- Role middleware for admin-only actions
-- Zod validation on all inputs (body and query params)
-- Stack traces never exposed in HTTP responses
+**Sécurité**
+- Mots de passe hachés avec bcrypt (facteur de coût 10)
+- JWT avec expiration 24h — payload : id, email, role
+- Middleware d'authentification sur toutes les routes protégées
+- Middleware de rôle pour les actions réservées aux admins
+- Validation Zod sur tous les inputs (corps et paramètres de requête)
+- Stack traces jamais exposées dans les réponses HTTP
 
-**Patient management**
-- Full CRUD with unique CIN validation
-- Soft delete — `deletedAt` timestamp, data preserved
-- Case-insensitive search on fullName and CIN
-- Pagination with metadata (total, page, totalPages)
+**Gestion des patients**
+- CRUD complet avec validation d'unicité du CIN
+- Suppression douce — timestamp `deletedAt`, données préservées
+- Recherche insensible à la casse sur fullName et CIN
+- Pagination avec métadonnées (total, page, totalPages)
 
-**Appointment management**
-- Creation with `status: pending` by default
-- 30-minute anti-conflict rule (exclusive boundaries)
-- Serializable transaction for concurrent request safety
-- Combined filters: UTC date and status
-- Status update with conflict re-check
+**Gestion des rendez-vous**
+- Création avec `status: pending` par défaut
+- Règle anti-conflit de 30 minutes (limites exclusives)
+- Transaction Serializable pour la sécurité des requêtes concurrentes
+- Filtres combinés : date UTC et statut
+- Mise à jour du statut avec re-vérification du conflit
 
 **Dashboard**
-- Four metrics in a single parallel Prisma transaction
-- `appointmentsToday` calculated in UTC
+- Quatre métriques en une seule transaction Prisma parallèle
+- `appointmentsToday` calculé en UTC
 
 **Frontend**
-- Persistent authentication via localStorage
-- JWT expiry detected on load and on 401 response
-- Protected routes with redirect to login
-- Delete button visible only for admin users
-- Field-level validation errors displayed inline
-- Loading indicator on all requests
+- Authentification persistante via localStorage
+- Expiration JWT détectée au chargement et sur réponse 401
+- Routes protégées avec redirection vers la page de connexion
+- Bouton de suppression visible uniquement pour les admins
+- Erreurs de validation affichées au niveau du champ
+- Indicateur de chargement sur toutes les requêtes
 
 ---
 
 ## Installation
 
-**Prerequisites**: Node.js v18+, npm v9+, PostgreSQL or Neon account
+**Prérequis** : Node.js v18+, npm v9+, compte PostgreSQL ou Neon
 
-### 1. Clone the repository
+### 1. Cloner le dépôt
 
 ```bash
 git clone https://github.com/Ayoub-glitsh/clinicflow-pern.git
 cd clinicflow-pern
 ```
 
-### 2. Install dependencies
+### 2. Installer les dépendances
 
 ```bash
 cd backend && npm install
 cd ../frontend && npm install
 ```
 
-### 3. Configure environment variables
+### 3. Configurer les variables d'environnement
 
 ```bash
 cd backend && cp .env.example .env
 ```
 
-Edit `backend/.env`:
+Modifier `backend/.env` :
 
 ```env
 DATABASE_URL="postgresql://user:pass@pooler-host/dbname?sslmode=require"
 DIRECT_URL="postgresql://user:pass@direct-host/dbname?sslmode=require"
-JWT_SECRET="your-strong-jwt-secret"
+JWT_SECRET="votre-secret-jwt-fort"
 JWT_EXPIRES_IN="24h"
 PORT=5000
 ```
 
-For Neon: `DATABASE_URL` uses the pooler URL, `DIRECT_URL` uses the direct URL (without `-pooler` in the hostname). `DIRECT_URL` is required for migrations.
+Pour Neon : `DATABASE_URL` utilise l'URL du pooler, `DIRECT_URL` utilise l'URL directe (sans `-pooler` dans le nom d'hôte). `DIRECT_URL` est requis pour les migrations.
 
-### 4. Run migrations and seed
+### 4. Migrations et seed
 
 ```bash
 cd backend
 
-# Generate Prisma client
+# Générer le client Prisma
 PRISMA_GENERATE_SKIP_AUTOINSTALL=true npx prisma generate
 
-# Apply migrations
+# Appliquer les migrations
 npx prisma migrate dev --name init
 
-# Seed the database
+# Peupler la base de données
 npx ts-node prisma/seed.ts
 ```
 
-### 5. Start the servers
+### 5. Démarrer les serveurs
 
 ```bash
 # Terminal 1 — Backend
 cd backend && npm run dev
-# API available at http://localhost:5000
+# API disponible sur http://localhost:5000
 
 # Terminal 2 — Frontend
 cd frontend && npm run dev
-# App available at http://localhost:5173
+# Application disponible sur http://localhost:5173
 ```
 
 ---
@@ -731,7 +696,7 @@ cd backend
 npm test
 ```
 
-### Results
+### Résultats
 
 ```
 Test Suites: 11 passed, 11 total
@@ -739,35 +704,35 @@ Tests:       45 passed, 45 total
 Time:        ~12s
 ```
 
-### Test coverage
+### Couverture des tests
 
-| Type | File | What is tested |
-|------|------|----------------|
-| Unit | middleware.test.ts | authMiddleware, requireRole, validate, errorMiddleware |
-| Unit | auth.service.test.ts | Login valid/invalid, getMe without passwordHash |
-| Unit | patients.service.test.ts | CIN conflict, soft-delete, pagination metadata |
-| Unit | appointments.service.test.ts | Conflict at 29min, boundary at 30min, 31min, self-exclusion |
-| Integration | auth.test.ts | POST /login, GET /me |
-| Integration | patients.test.ts | Full CRUD with role checks |
-| Integration | appointments.test.ts | POST, GET, PATCH status |
-| Integration | dashboard.test.ts | GET /stats, 401 without token |
-| Property P1 | conflict.test.ts | Rejection guaranteed for offset in 1-29 min — 100 runs |
-| Property P2 | conflict.test.ts | Accepted at exactly 30 min offset — 100 runs |
-| Property P3 | patients.test.ts | Soft-deleted patients absent from all lists — 100 runs |
-| Property P4 | patients.test.ts | data.length never exceeds limit — 100 runs |
-| Property P5 | auth.test.ts | Any invalid token returns 401 — 50 runs |
-| Property P6 | auth.test.ts | Staff always gets 403 on DELETE patient — 50 runs |
+| Type | Fichier | Ce qui est testé |
+|------|---------|-----------------|
+| Unitaire | middleware.test.ts | authMiddleware, requireRole, validate, errorMiddleware |
+| Unitaire | auth.service.test.ts | Connexion valide/invalide, getMe sans passwordHash |
+| Unitaire | patients.service.test.ts | Conflit CIN, suppression douce, métadonnées de pagination |
+| Unitaire | appointments.service.test.ts | Conflit à 29min, limite à 30min, 31min, auto-exclusion |
+| Intégration | auth.test.ts | POST /login, GET /me |
+| Intégration | patients.test.ts | CRUD complet avec vérifications de rôles |
+| Intégration | appointments.test.ts | POST, GET, PATCH statut |
+| Intégration | dashboard.test.ts | GET /stats, 401 sans token |
+| Propriété P1 | conflict.test.ts | Rejet garanti pour offset dans 1-29 min — 100 exécutions |
+| Propriété P2 | conflict.test.ts | Accepté exactement à 30 min — 100 exécutions |
+| Propriété P3 | patients.test.ts | Patients supprimés de manière douce absents de toutes les listes — 100 exécutions |
+| Propriété P4 | patients.test.ts | data.length ne dépasse jamais limit — 100 exécutions |
+| Propriété P5 | auth.test.ts | Tout token invalide retourne 401 — 50 exécutions |
+| Propriété P6 | auth.test.ts | Staff obtient toujours 403 sur DELETE patient — 50 exécutions |
 
 ---
 
-## Seed Credentials
+## Identifiants de test
 
-After running the seed script:
+Après l'exécution du script de seed :
 
-| Role | Email | Password |
-|------|-------|----------|
+| Rôle | Email | Mot de passe |
+|------|-------|-------------|
 | Admin | admin@clinicflow.com | Admin123! |
 | Staff | staff1@clinicflow.com | Staff123! |
 | Staff | staff2@clinicflow.com | Staff123! |
 
-**Seeded data**: 5 patients, 10 appointments (4 pending, 3 confirmed, 3 cancelled)
+**Données seedées** : 5 patients, 10 rendez-vous (4 en attente, 3 confirmés, 3 annulés)
