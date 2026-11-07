@@ -51,14 +51,14 @@ ClinicFlow is a full-stack web application designed to help small clinics manage
 
 | | Technology | Role |
 |---|---|---|
-| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="30"/> | **Node.js v22** | Server-side JavaScript runtime |
+| <img src="https://nodejs.org/static/logos/nodejsLight.svg" alt="Node.js" width="55"> | **Node.js v22** | Server-side JavaScript runtime |
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" width="30"/> | **Express.js 4** | HTTP framework — routing and middleware |
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="30"/> | **TypeScript 5** | Static typing, compile-time safety |
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="30"/> | **PostgreSQL 15** | Relational database |
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg" width="30"/> | **Prisma ORM** | Typed DB client, migrations, schema-as-code |
-| <img src="https://zod.dev/logo.svg" width="30"/> | **Zod** | Input validation with TypeScript schemas |
+| <img src="https://cdn.simpleicons.org/zod/3E67B1" alt="Zod" width="35" height="35" /> | **Zod** | Input validation with TypeScript schemas |
 | <img src="https://jwt.io/img/favicon/favicon-16x16.png" width="30"/> | **JWT** | Stateless authentication — 24h tokens |
-| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="30"/> | **bcryptjs** | Password hashing (cost factor 10) |
+| <img src="https://cdn-icons-png.flaticon.com/512/3064/3064155.png" alt="bcryptjs" width="40" height="30" /> | **bcryptjs** | Password hashing (cost factor 10) |
 
 ### Frontend
 
@@ -77,7 +77,7 @@ ClinicFlow is a full-stack web application designed to help small clinics manage
 |---|---|---|
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" width="30"/> | **Jest 29** | Test runner with ts-jest |
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="30"/> | **Supertest** | HTTP integration testing without a live server |
-| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="30"/> | **fast-check** | Property-based testing — 100 runs per property |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="35"/> | **fast-check** | Property-based testing — 100 runs per property |
 
 ---
 
