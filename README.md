@@ -1,4 +1,30 @@
 <div align="center">
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="45" height="45" alt="Node.js" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" width="45" height="45" alt="Express" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="45" height="45" alt="TypeScript" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="45" height="45" alt="PostgreSQL" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg" width="45" height="45" alt="Prisma" />
+<img src="https://cdn.simpleicons.org/zod/3E67B1" width="45" height="45" alt="Zod" />
+<img src="https://cdn.simpleicons.org/jsonwebtokens/000000" width="45" height="45" alt="JWT" />
+<img src="https://cdn-icons-png.flaticon.com/512/3064/3064155.png" width="45" height="45" alt="bcryptjs" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="45" height="45" alt="React" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" width="45" height="45" alt="Vite" />
+<img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" width="45" height="45" alt="Tailwind CSS" />
+<img src="https://cdn.simpleicons.org/reactrouter/CA4245" width="45" height="45" alt="React Router" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/axios/axios-plain.svg" width="45" height="45" alt="Axios" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" width="45" height="45" alt="Jest" />
+<img src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/clipboard-check.svg" width="45" height="45" alt="Supertest" />
+<img src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/brain-circuit.svg" width="45" height="45" alt="fast-check" />
+
+</div>
+
+
+
+<br/>
+
+
+<div align="center">
   <a href="https://git.io/typing-svg">
     <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=35&pause=1000&color=2E8B57&center=true&vCenter=true&width=600&lines=ClinicFlow;Clinic+Management+System;PERN+Stack" alt="Typing SVG" />
   </a>
