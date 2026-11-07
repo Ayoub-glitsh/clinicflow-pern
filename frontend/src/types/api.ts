@@ -12,6 +12,7 @@ export interface Patient {
   cin: string;
   birthDate: string;
   phone: string;
+  address: string | null;
   createdAt: string;
   deletedAt: string | null;
 }

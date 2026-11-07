@@ -59,6 +59,12 @@ export default function PatientDetailPage() {
               <dd className="text-gray-900 mt-0.5">{v}</dd>
             </div>
           ))}
+          {patient.address && (
+            <div className="col-span-2">
+              <dt className="font-medium text-gray-500">Address</dt>
+              <dd className="text-gray-900 mt-0.5">{patient.address}</dd>
+            </div>
+          )}
         </dl>
       </div>
       <h3 className="text-lg font-semibold text-gray-900 mb-3">Appointments ({appointments.length})</h3>
