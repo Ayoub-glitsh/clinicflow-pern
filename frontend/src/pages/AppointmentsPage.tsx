@@ -11,6 +11,7 @@ export default function AppointmentsPage() {
   const [data, setData] = useState<PaginatedResponse<Appointment> | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [patientNameFilter, setPatientNameFilter] = useState('');
   const [dateFilter, setDateFilter] = useState('');
   const [statusFilter, setStatusFilter] = useState('');
   const [page, setPage] = useState(1);
@@ -25,6 +26,7 @@ export default function AppointmentsPage() {
       params: {
         page,
         limit: 10,
+        patientName: patientNameFilter || undefined,
         date: dateFilter || undefined,
         status: statusFilter || undefined,
       },
@@ -32,9 +34,13 @@ export default function AppointmentsPage() {
       .then((r: { data: PaginatedResponse<Appointment> }) => setData(r.data))
       .catch(() => setError('Failed to load appointments. Please try again.'))
       .finally(() => setLoading(false));
-  }, [page, dateFilter, statusFilter]);
+  }, [page, patientNameFilter, dateFilter, statusFilter]);
 
-  useEffect(() => { fetchAppointments(); }, [fetchAppointments]);
+  // Debounce the patient name search — wait 300ms after the user stops typing
+  useEffect(() => {
+    const timer = setTimeout(fetchAppointments, 300);
+    return () => clearTimeout(timer);
+  }, [fetchAppointments]);
 
   const handleStatusUpdate = async (id: string, status: string) => {
     try {
@@ -55,6 +61,15 @@ export default function AppointmentsPage() {
     }
   };
 
+  const hasActiveFilters = patientNameFilter || dateFilter || statusFilter;
+
+  const clearFilters = () => {
+    setPatientNameFilter('');
+    setDateFilter('');
+    setStatusFilter('');
+    setPage(1);
+  };
+
   return (
     <div>
       <div className="flex items-center justify-between mb-6">
@@ -67,32 +82,61 @@ export default function AppointmentsPage() {
         </button>
       </div>
       {error && <ErrorBanner message={error} onDismiss={() => setError(null)} />}
-      <div className="flex gap-4 mb-4 flex-wrap">
+
+      {/* Filters */}
+      <div className="flex gap-3 mb-4 flex-wrap items-center">
+        {/* Patient name search */}
+        <div className="relative">
+          <svg
+            className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" />
+          </svg>
+          <input
+            type="text"
+            value={patientNameFilter}
+            onChange={e => { setPatientNameFilter(e.target.value); setPage(1); }}
+            placeholder="Search by patient name..."
+            className="pl-9 pr-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 w-56"
+          />
+        </div>
+
+        {/* Date filter */}
         <input
           type="date"
           value={dateFilter}
           onChange={e => { setDateFilter(e.target.value); setPage(1); }}
-          className="border border-gray-300 rounded-md px-3 py-2 text-sm"
+          className="border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
+
+        {/* Status filter */}
         <select
           value={statusFilter}
           onChange={e => { setStatusFilter(e.target.value); setPage(1); }}
-          className="border border-gray-300 rounded-md px-3 py-2 text-sm"
+          className="border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <option value="">All statuses</option>
           <option value="pending">Pending</option>
           <option value="confirmed">Confirmed</option>
           <option value="cancelled">Cancelled</option>
         </select>
-        {(dateFilter || statusFilter) && (
+
+        {/* Clear filters */}
+        {hasActiveFilters && (
           <button
-            onClick={() => { setDateFilter(''); setStatusFilter(''); setPage(1); }}
+            onClick={clearFilters}
             className="text-sm text-gray-500 hover:text-gray-700"
           >
             Clear filters
           </button>
         )}
       </div>
+
       {loading ? <Spinner /> : (
         <>
           <AppointmentTable

@@ -75,6 +75,12 @@ export async function getAppointments(query: AppointmentQueryInput) {
     where.status = query.status;
   }
 
+  if (query.patientName) {
+    where.patient = {
+      fullName: { contains: query.patientName, mode: 'insensitive' },
+    };
+  }
+
   const [data, total] = await prisma.$transaction([
     prisma.appointment.findMany({
       where,

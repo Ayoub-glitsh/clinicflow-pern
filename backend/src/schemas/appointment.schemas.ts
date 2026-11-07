@@ -27,6 +27,7 @@ export const appointmentQuerySchema = z.object({
     .regex(/^\d{4}-\d{2}-\d{2}$/, 'date must be YYYY-MM-DD')
     .optional(),
   status: appointmentStatusEnum.optional(),
+  patientName: z.string().optional(),
 });
 
 export type CreateAppointmentInput = z.infer<typeof createAppointmentSchema>;
