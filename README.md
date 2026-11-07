@@ -67,7 +67,7 @@ ClinicFlow is a full-stack web application designed to help small clinics manage
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="30"/> | **React 18** | UI with hooks, context, functional components |
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="30"/> | **TypeScript 5** | Typed props, API calls, state |
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" width="30"/> | **Vite 8** | Fast build tool with HMR |
-| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" width="30"/> | **Tailwind CSS 3** | Utility-first styling |
+| <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="Tailwind CSS" width="40" height="40" /> | **Tailwind CSS 3** | Utility-first styling |
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="30"/> | **React Router v6** | SPA navigation with protected routes |
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/axios/axios-plain.svg" width="30"/> | **Axios** | HTTP client with JWT/401 interceptors |
 
