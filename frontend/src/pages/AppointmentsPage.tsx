@@ -14,7 +14,9 @@ export default function AppointmentsPage() {
   const [dateFilter, setDateFilter] = useState('');
   const [statusFilter, setStatusFilter] = useState('');
   const [page, setPage] = useState(1);
-  const [showForm, setShowForm] = useState(false);
+
+  // undefined = form closed, null = create mode, Appointment = edit mode
+  const [editingAppointment, setEditingAppointment] = useState<Appointment | null | undefined>(undefined);
 
   const fetchAppointments = useCallback(() => {
     setLoading(true);
@@ -43,12 +45,22 @@ export default function AppointmentsPage() {
     }
   };
 
+  const handleDelete = async (id: string) => {
+    if (!confirm('Delete this appointment? This action cannot be undone.')) return;
+    try {
+      await api.delete(`/appointments/${id}`);
+      fetchAppointments();
+    } catch (err: any) {
+      setError(err.response?.data?.error || 'Failed to delete appointment.');
+    }
+  };
+
   return (
     <div>
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-2xl font-bold text-gray-900">Appointments</h2>
         <button
-          onClick={() => setShowForm(true)}
+          onClick={() => setEditingAppointment(null)}
           className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm hover:bg-blue-700"
         >
           + New Appointment
@@ -83,14 +95,20 @@ export default function AppointmentsPage() {
       </div>
       {loading ? <Spinner /> : (
         <>
-          <AppointmentTable appointments={data?.data || []} onStatusUpdate={handleStatusUpdate} />
+          <AppointmentTable
+            appointments={data?.data || []}
+            onStatusUpdate={handleStatusUpdate}
+            onEdit={appt => setEditingAppointment(appt)}
+            onDelete={handleDelete}
+          />
           <Pagination page={page} totalPages={data?.totalPages || 1} onPageChange={setPage} />
         </>
       )}
-      {showForm && (
+      {editingAppointment !== undefined && (
         <AppointmentForm
-          onClose={() => setShowForm(false)}
-          onSuccess={() => { setShowForm(false); fetchAppointments(); }}
+          appointment={editingAppointment ?? undefined}
+          onClose={() => setEditingAppointment(undefined)}
+          onSuccess={() => { setEditingAppointment(undefined); fetchAppointments(); }}
         />
       )}
     </div>

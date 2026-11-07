@@ -1,7 +1,7 @@
 import { AppError } from '../utils/AppError';
 import { prisma } from '../prisma/client';
 import { Prisma } from '@prisma/client';
-import { CreateAppointmentInput, AppointmentQueryInput } from '../schemas/appointment.schemas';
+import { CreateAppointmentInput, UpdateAppointmentInput, AppointmentQueryInput } from '../schemas/appointment.schemas';
 
 const CONFLICT_WINDOW_MS = 30 * 60 * 1000; // 30 minutes in milliseconds
 
@@ -95,4 +95,43 @@ export async function updateAppointmentStatus(id: string, newStatus: 'pending' |
   }
 
   return prisma.appointment.update({ where: { id }, data: { status: newStatus } });
+}
+
+export async function updateAppointment(id: string, data: UpdateAppointmentInput) {
+  const appt = await prisma.appointment.findUnique({ where: { id } });
+  if (!appt) throw new AppError(404, 'Appointment with id ' + id + ' not found');
+
+  // If patientId is being changed, verify the new patient exists
+  if (data.patientId && data.patientId !== appt.patientId) {
+    const patient = await prisma.patient.findFirst({ where: { id: data.patientId, deletedAt: null } });
+    if (!patient) throw new AppError(404, 'Patient with id ' + data.patientId + ' not found');
+  }
+
+  const appointmentDate = data.appointmentDate ? new Date(data.appointmentDate) : appt.appointmentDate;
+  const patientId = data.patientId ?? appt.patientId;
+  const newStatus = data.status ?? appt.status;
+
+  // Re-check conflict if confirming
+  if (newStatus === 'confirmed') {
+    const conflict = await findConflict(patientId, appointmentDate, id);
+    if (conflict) {
+      throw new AppError(409, 'Conflicts with confirmed appointment at ' + conflict.appointmentDate.toISOString());
+    }
+  }
+
+  return prisma.appointment.update({
+    where: { id },
+    data: {
+      ...(data.patientId !== undefined && { patientId: data.patientId }),
+      ...(data.appointmentDate !== undefined && { appointmentDate }),
+      ...(data.notes !== undefined && { notes: data.notes }),
+      ...(data.status !== undefined && { status: data.status }),
+    },
+  });
+}
+
+export async function deleteAppointment(id: string) {
+  const appt = await prisma.appointment.findUnique({ where: { id } });
+  if (!appt) throw new AppError(404, 'Appointment with id ' + id + ' not found');
+  await prisma.appointment.delete({ where: { id } });
 }
